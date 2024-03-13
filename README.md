@@ -1,0 +1,1 @@
+# Alguns Metodos da Classe Strinf para estudo e memorizar
