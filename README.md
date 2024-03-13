@@ -1,1 +1,1 @@
-# Alguns Metodos da Classe Strinf para estudo e memorizar
+# Alguns Metodos da Classe String para estudo e memorizar
