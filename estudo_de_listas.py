@@ -55,19 +55,114 @@ for numero in numeros:
         pares.append(numero)
         
 print(pares)
-
-# compreention
-
-impar = [numero for numero in numeros if numero % 2 == 1]
-
-print(impar)
-
 quadrado = []
 for numero in numeros:
     quadrado.append(numero ** 2)
 
 print(quadrado)
 
+# comprehennsion
+
+impar = [numero for numero in numeros if numero % 2 == 1]
+
+print(impar)
+
 quadrado = [numero **2 for numero in numeros]
 
 print(quadrado)
+
+# Métodos da classe Lista
+
+# append()
+lista = []
+
+lista.append(1)
+lista.append("Python")
+lista.append([40,30,20])
+lista.append("Python")
+
+print(lista)
+
+# copy()
+
+lista2 = lista.copy()
+
+print(lista)
+print(lista2)
+
+# clear()
+
+lista.clear()
+
+print(lista)
+print(lista2)
+
+# count()
+
+print(lista2.count("Python"))
+
+# extend()
+
+n1 = [1, 2, 2, 3]
+n2 = [4, 5, 5, 6]
+
+n1.extend(n2)
+
+print(n1)
+print(n2)
+
+# index()
+
+print(n1.index(2))
+
+# pop()
+
+n1.pop()
+
+print(n1)
+
+n1.pop(1)
+
+print(n1)
+
+# remove()
+
+n1.remove(5)
+
+print(n1)
+
+# reverse()
+
+n1.reverse()
+print(n1)
+
+# sort()
+
+nomes = ["Flavio", "Alan", "Paulo", "Joao", "Camila"]
+print(nomes)
+nomes.sort()
+print(nomes)
+
+nomes.sort(reverse=True)
+print(nomes)
+
+nomes.sort(key=lambda x: len(x))
+print(nomes)
+
+nomes.sort(key=lambda x: len(x), reverse=True)
+print(nomes)
+
+# len()
+
+print(len(nomes))
+
+# sorted()
+
+print(sorted(nomes))
+
+
+
+
+
+
+
