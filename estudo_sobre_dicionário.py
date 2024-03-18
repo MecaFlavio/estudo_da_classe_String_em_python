@@ -64,6 +64,10 @@ print(teste2.items())
 
 print(teste2.keys())
 
+# values()
+
+print(teste2.values())
+
 # pop()
 
 print(teste2.pop("nome"))
@@ -74,7 +78,32 @@ print(teste2.pop("nome", "chave não encontrada"))
 teste2.popitem()
 print(teste2)
 
-# 
+# setdefault()
 
+teste2.setdefault("nome", "flavio")
+teste2.setdefault("idade", 28)
+teste2.setdefault("nome", "guilherme")
+
+print(teste2)
+
+# update()
+
+teste2.update({"nome": "flavio", "idade": 34})
+print(teste2)
+
+teste2.update({"ana@teste.com":{"Nome":"Ana","Idade": 28}})
+print(teste2)
+
+# in
+
+resultado = "ana@teste.com" in teste2
+print(resultado)
+
+# del
+
+del teste2["ana@teste.com"] 
+print(teste2)
+
+print(teste2["nome"])
 
 
