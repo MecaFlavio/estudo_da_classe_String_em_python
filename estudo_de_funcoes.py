@@ -64,3 +64,52 @@ def exibir_poema(data_extenso, *args, **kwargs):
 
 exibir_poema("18 de Agosto de 2024", "Zen of Python", "Beautiful is better than ugly","Explicit is better than implicit", autor="Tim Peters", ano=1999, aka="O brabo")
 
+# Parâmetros especiais - por posição, posição e nome, somente nome
+
+#exemplo posição e hibrido ,/,
+
+def criar_carro(modelo, ano, placa, /, marca, motor, combustivel):
+    print(modelo, ano, placa, marca, motor, combustivel)
+
+criar_carro("Palio", 1999, "ABC-1234", marca="Fiat", motor="1.0", combustivel="Etanol")
+
+#exemplo posição-keyword ,/, *,
+
+def criar_carro_2(modelo, ano, placa, /,*, marca, motor, combustivel):
+    print(modelo, ano, placa, marca, motor, combustivel)
+
+criar_carro_2("Palio", 1999, "ABC-1234", marca="Fiat", motor="1.0", combustivel="Etanol")
+
+# Objetos de Primeira classe
+# Podemos atribuir funções a variáveis, passa-las como parâmetros,
+# usa-las como valores em estruturas de dados(listas, tuplas, dict)
+# e usar como valor de retorno para uma função
+
+#exemplo 1
+def somar (a,b):
+    return a + b
+
+def exibir_resultado(a,b, funcao):
+    resultado = funcao(a,b)
+    print(f"O resultado da operação {a} + {b} = {resultado}")
+
+exibir_resultado(10, 10, somar)
+
+# exemplo 2
+
+operacao = somar
+
+print(operacao(2,5))
+
+
+# Escopo local e global
+
+salário = 2000
+
+def salario_bonus(bonus):
+    global salário
+    salário += bonus
+    return salário
+
+soma_salario = salario_bonus(500)
+print(soma_salario)
